@@ -1,0 +1,21 @@
+{
+  "name": "Burrow",
+  "version": "0.0.0",
+  "description": "Telling you who is home",
+  "dependencies": {
+    "express": "^3.4.7"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "contriburors": [
+    {
+      "name": "Sean Aryana",
+      "email": "saryana0@uw.edu"
+    },
+    {
+      "name": "Steven Raden",
+      "email": "sgraden@uw.edu"
+    }
+  ]
+}
