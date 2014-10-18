@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:hint="@string/first_name_hint"
+        android:text="@string/first_name_hint"
         android:ems="10"
         android:id="@+id/first_name"
         android:layout_below="@+id/hello"
@@ -31,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:hint="@string/last_name_hint"
+        android:text="@string/last_name_hint"
         android:ems="10"
         android:id="@+id/last_name"
         android:layout_below="@+id/first_name"
@@ -42,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:hint="@string/user_name_hint"
+        android:text="@string/user_name_hint"
         android:ems="10"
         android:id="@+id/user_name"
         android:layout_below="@+id/last_name"
@@ -52,23 +52,53 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/register_text"
+        android:text="@string/register_text"
         android:id="@+id/register_button"
-        android:layout_below="@+id/user_name"
+        android:layout_below="@+id/connect_home_text"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="105dp" />
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:hint="@string/password_hint"
+        android:text="@string/password_hint"
         android:ems="10"
         android:id="@+id/password"
         android:layout_below="@+id/user_name"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/house_admin_checkbox"
+        android:id="@+id/checkBox"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false" />
+
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SHARE"
+        android:id="@+id/share"
+        android:layout_below="@+id/checkBox"
+        android:layout_alignRight="@+id/hello"
+        android:layout_alignEnd="@+id/hello" />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/connect_home_text"
+        android:hint="@string/connect_home_name"
+        android:layout_below="@+id/share"
+        android:layout_alignRight="@+id/password"
+        android:layout_alignEnd="@+id/password" />
 
 
 </RelativeLayout>

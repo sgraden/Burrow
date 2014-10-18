@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -25,18 +26,22 @@ public class RegisterActivity extends Activity
                         Callback<JsonObject> {
 
     public String TAG = RegisterActivity.class.getCanonicalName();
+    SharedPreferences preferences;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
-
+        preferences = SharedPrefs.getInstance(this);
+        boolean registered = preferences.getBoolean(getString(R.string.user_registered), false);
+        String connectedHome = preferences.getString("connectedHome", BurrowMainActivity.NO_HOME);
+        if (registered && !connectedHome.equals("noHome")) {
+            BurrowMainActivity.launch(RegisterActivity.this);;
+        }
         Button registerButton = (Button) findViewById(R.id.register_button);
         registerButton.setOnClickListener(this);
     }
-
-
 
 
     @Override
@@ -67,31 +72,46 @@ public class RegisterActivity extends Activity
      */
     @Override
     public void onClick(View v) {
-        String firstName = ((EditText)findViewById(R.id.first_name)).getText().toString();
-        String lastName = ((EditText)findViewById(R.id.last_name)).getText().toString();
-        String userName = ((EditText)findViewById(R.id.user_name)).getText().toString();
-        String password = ((EditText)findViewById(R.id.password)).getText().toString();
-
-        RegisterClient registerClient = new RegisterClient(this);
-        registerClient.registerUser(firstName, lastName, userName, password);
+        String firstName = getIdString(R.id.first_name);
+        String lastName = getIdString(R.id.last_name);
+        String userName = getIdString(R.id.user_name);
+        String password = getIdString(R.id.password);
+        String homeName = getIdString(R.id.connect_home_text);
+        boolean isAdmin = ((CheckBox)findViewById(R.id.checkBox)).isChecked();
+        if (firstName.isEmpty() || lastName.isEmpty() || userName.isEmpty() || password.isEmpty() || homeName.isEmpty()) {
+            Toast.makeText(RegisterActivity.this, "Please fill out all fields", Toast.LENGTH_LONG).show();
+        } else {
+            RegisterClient.getInstance(this).registerUser(firstName,
+                    lastName, userName, password, homeName, isAdmin, this);
+        }
     }
 
+    private String getIdString(int id) {
+        return ((EditText)findViewById(id)).getText().toString();
+    }
 
     @Override
     public void success(JsonObject jsonObject, Response response) {
+        Log.d(TAG, "" + jsonObject);
         boolean success = jsonObject.get("success").getAsBoolean();
-        Log.d(TAG, "" + success);
-        SharedPreferences preferences = getSharedPreferences(getString(R.string.pref_location), Context.MODE_PRIVATE);
+        String homeid = jsonObject.get("homeid").getAsString();
+        String ssid = jsonObject.get("ssid").getAsString();
+
+
+
         preferences.edit().putBoolean(getString(R.string.user_registered), success).apply();
-        Intent intent = new Intent();
-        intent.putExtra("result", "test");
-        setResult(RESULT_OK);
-        Toast.makeText(RegisterActivity.this, "Welcome to Burrow, register with a home now!", Toast.LENGTH_LONG).show();
-        finish();
+        preferences.edit().putString("homeConnected", homeid).apply();
+        preferences.edit().putString("ssid", ssid).apply();
+        BurrowMainActivity.launch(RegisterActivity.this);
     }
 
     @Override
     public void failure(RetrofitError error) {
         Log.d(TAG, error.toString());
+    }
+
+    public static void launch(Context c) {
+        Intent i = new Intent(c, RegisterActivity.class);
+        c.startActivity(i);
     }
 }

@@ -15,5 +15,10 @@
     <string name="pref_location">localPrefrences</string>
     <string name="user_registered">userRegistered</string>
     <string name="title_activity_register_home">RegisterHome</string>
+    <string name="home_register">Register a Home</string>
+    <string name="home_register_name">Home Name</string>
+    <string name="connect_home_name">Connect to home by name</string>
+    <string name="connect_to_home_by_name">Connec to home</string>
+    <string name="house_admin_checkbox">Are you the house Admin?</string>
 
 </resources>
