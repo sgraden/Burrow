@@ -11,19 +11,33 @@ import android.view.MenuItem;
 public class BurrowMainActivity extends Activity {
 
     public String TAG = this.getClass().getCanonicalName();
+    private SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_burrow_main);
 
-        SharedPreferences preferences = this.getSharedPreferences(getString(R.string.pref_location), Context.MODE_PRIVATE);
+        preferences = SharedPrefs.getInstance(this);
         boolean registered = preferences.getBoolean(getString(R.string.user_registered), false);
         if (!registered) {
             Intent registerIntent = new Intent(this, RegisterActivity.class);
-            startActivity(registerIntent);
+//            startActivity(registerIntent);
+            startActivityForResult(registerIntent, -1);
         }
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode != -1) return;
+        if (resultCode == RESULT_OK) {
+            String home = preferences.getString("home", "noHome");
+            if (home.equals("noHome")) {
+                Intent intent = new Intent(BurrowMainActivity.this, RegisterHome.class);
+                startActivity(intent);
+            }
+        }
     }
 
 

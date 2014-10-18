@@ -3,7 +3,7 @@
     package="dubhacks.android.sasr.burrow" >
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
@@ -23,7 +23,10 @@
         <activity
             android:name=".RegisterActivity"
             android:label="@string/title_activity_register" >
-
+        </activity>
+        <activity
+            android:name=".RegisterHome"
+            android:label="@string/title_activity_register_home" >
         </activity>
     </application>
 

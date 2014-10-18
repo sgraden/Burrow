@@ -7,6 +7,7 @@ import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.telephony.TelephonyManager;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -32,9 +33,12 @@ public class RegisterClient {
 
     private Context context;
     private Map<String, Map<String, String>> upHomeInfo;
+    private SharedPreferences preferences;
 
     public RegisterClient(Context context) {
         this.context = context;
+        preferences = context.getSharedPreferences(context.getString(R.string.pref_location), Context.MODE_PRIVATE);
+
     }
 
     interface RegisterClientInterface {
@@ -53,22 +57,27 @@ public class RegisterClient {
                 .build();
         RegisterClientInterface clientInterface = restAdapter.create(RegisterClientInterface.class);
 
-        clientInterface.registerUser(body, new Callback<JsonObject>() {
+        clientInterface.registerUser(body, RegisterActivity); /*new Callback<JsonObject>() {
+
             @Override
             public void success(JsonObject jsonObject, Response response) {
                 boolean success = jsonObject.get("success").getAsBoolean();
                 Log.d(TAG, "" + success);
-                SharedPreferences preferences = context.getSharedPreferences(context.getString(R.string.pref_location), Context.MODE_PRIVATE);
-                preferences.edit().putBoolean(context.getString(R.string.user_registered), success).apply();
-
-
+                SharedPreferences preferences = getSharedPreferences(getString(R.string.pref_location), Context.MODE_PRIVATE);
+                preferences.edit().putBoolean(getString(R.string.user_registered), success).apply();
+                Intent intent = new Intent();
+                intent.putExtra("result", "test");
+                context.setResult(RESULT_OK);
+                context
+                Toast.makeText(context.this, "Welcome to Burrow, register with a home now!", Toast.LENGTH_LONG).show();
+                finish();
             }
 
             @Override
             public void failure(RetrofitError error) {
                 Log.d(TAG, error.toString());
             }
-        });
+        });*/
     }
 
     /**
@@ -86,6 +95,10 @@ public class RegisterClient {
         userInfo.put("lastName", lastName);
         userInfo.put("userName", username);
         userInfo.put("password", password);
+
+        preferences.edit().putString("firstName", firstName)
+                .putString("lastName", lastName)
+                .putString("userName", username).apply();
 
         TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         String phoneNumber = telephonyManager.getLine1Number();
