@@ -45,7 +45,7 @@ public class BurrowMainActivity extends Activity implements Callback<JsonObject>
         setContentView(R.layout.activity_burrow_main);
         mListView = (ListView)findViewById(R.id.list_content_view);
         TextView homeName = (TextView)findViewById(R.id.random_text);
-        String home = mPreferences.getString("ssid", NO_HOME);
+        String home = mPreferences.getString("homeName", NO_HOME);
         home = home.equals(NO_HOME) ? "" : home;
         homeName.setText(home);
         Button refreshButton = (Button) findViewById(R.id.refresh_button);

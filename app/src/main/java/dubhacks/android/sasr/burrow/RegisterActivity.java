@@ -47,10 +47,10 @@ public class RegisterActivity extends Activity
         checkBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (checkBox.isChecked()) {
-                    hint.setText(R.string.connect_home_name);
+                if (!checkBox.isChecked()) {
+                    hint.setHint(R.string.connect_home_name);
                 } else {
-                    hint.setText("Connect to a Home Name");
+                    hint.setHint("Create a Home Name");
                 }
             }
         });
@@ -62,6 +62,16 @@ public class RegisterActivity extends Activity
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.register, menu);
         return true;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        boolean registered = preferences.getBoolean(getString(R.string.user_registered), false);
+        String connectedHome = preferences.getString("connectedHome", BurrowMainActivity.NO_HOME);
+        if (registered && !connectedHome.equals("noHome")) {
+            BurrowMainActivity.launch(RegisterActivity.this);
+        }
     }
 
     @Override
@@ -109,11 +119,13 @@ public class RegisterActivity extends Activity
         boolean success = jsonObject.get("success").getAsBoolean();
         String homeid = jsonObject.get("homeid").getAsString();
         String ssid = jsonObject.get("ssid").getAsString();
+        String homeName = jsonObject.get("homeName").getAsString();
 
 
         preferences.edit().putBoolean(getString(R.string.user_registered), success).apply();
         preferences.edit().putString("homeConnected", homeid).apply();
         preferences.edit().putString("ssid", ssid).apply();
+        preferences.edit().putString("homeName", homeName).apply();
         BurrowMainActivity.launch(RegisterActivity.this);
     }
 
