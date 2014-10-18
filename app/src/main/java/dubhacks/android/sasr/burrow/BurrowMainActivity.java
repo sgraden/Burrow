@@ -1,16 +1,14 @@
 package dubhacks.android.sasr.burrow;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 
-
-public class BurrowMainActivity extends Activity implements View.OnClickListener {
+public class BurrowMainActivity extends Activity {
 
     public String TAG = this.getClass().getCanonicalName();
 
@@ -19,8 +17,12 @@ public class BurrowMainActivity extends Activity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_burrow_main);
 
-        Button registerButton = (Button) findViewById(R.id.register_button);
-        registerButton.setOnClickListener(this);
+        SharedPreferences preferences = this.getSharedPreferences(getString(R.string.pref_location), Context.MODE_PRIVATE);
+        boolean registered = preferences.getBoolean(getString(R.string.user_registered), false);
+        if (!registered) {
+            Intent registerIntent = new Intent(this, RegisterActivity.class);
+            startActivity(registerIntent);
+        }
 
     }
 
@@ -42,19 +44,5 @@ public class BurrowMainActivity extends Activity implements View.OnClickListener
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    /**
-     * Listerner for the button. Eventually we want to push this elsewhere since we
-     * don't need this logic in the the activity start.
-     * @param v
-     */
-    @Override
-    public void onClick(View v) {
-        String firstName = ((EditText)findViewById(R.id.first_name)).getText().toString();
-        String lastName = ((EditText)findViewById(R.id.last_name)).getText().toString();
-        String userName = ((EditText)findViewById(R.id.user_name)).getText().toString();
-        Log.d(TAG, "FN: " + firstName + " LN " + lastName + " username " + userName);
-
     }
 }
