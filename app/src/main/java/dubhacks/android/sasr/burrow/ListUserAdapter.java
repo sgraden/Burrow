@@ -32,7 +32,7 @@ public class ListUserAdapter extends ArrayAdapter<User> {
         TextView firstRow = (TextView)  convertView.findViewById(R.id.second_line);
         User user = mUsers.get(position);
         firstRow.setText(user.userName.replace("\"", ""));
-        secondRow.setText("FirstName: " + user.firstName.replace("\"", "") + "\n Last Name :" + user.lastName.replace("\"", ""));
+        secondRow.setText("FirstName: " + user.firstName.replace("\"", "") + "\n Last Name: " + user.lastName.replace("\"", ""));
         return convertView;
     }
 }

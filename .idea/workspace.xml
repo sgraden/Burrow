@@ -55,139 +55,88 @@
     <favorites_list name="Burrow" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.51666665">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="RegisterClient.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/RegisterClient.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="2488" max-vertical-offset="3240">
-                  <caret line="143" column="0" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#2656#2672#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="702">
-                  <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RegisterActivity.java" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/RegisterActivity.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.20143884" vertical-offset="1582" max-vertical-offset="2358">
-                  <caret line="91" column="28" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#1106#1141#0" expanded="true" />
-                    <element signature="e#1697#2022#0" expanded="true" />
-                    <element signature="e#1867#1893#0" expanded="true" />
-                    <element signature="e#2011#2012#0" expanded="true" />
-                    <element signature="e#4171#4206#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="list_items.xml" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_items.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-13.655172" vertical-offset="108" max-vertical-offset="648">
-                  <caret line="28" column="25" selection-start-line="28" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-              <provider editor-type-id="android-designer">
-                <state />
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="activity_register.xml" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-11.724138" vertical-offset="1082" max-vertical-offset="1620">
-                  <caret line="79" column="31" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
-                  <folding>
-                    <element signature="e#681#706#0" expanded="true" />
-                    <element signature="e#1078#1102#0" expanded="true" />
-                    <element signature="e#1475#1499#0" expanded="true" />
-                    <element signature="e#2208#2231#0" expanded="true" />
-                    <element signature="e#2559#2589#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-              <provider editor-type-id="android-designer">
-                <state />
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="58" max-vertical-offset="558">
-                  <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="BurrowMainActivity.java" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/BurrowMainActivity.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-1.0935252" vertical-offset="862" max-vertical-offset="3006">
-                  <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#1927#1962#0" expanded="true" />
-                    <element signature="e#2463#3732#0" expanded="true" />
-                    <element signature="e#3717#3718#0" expanded="true" />
-                    <element signature="e#5798#5799#0" expanded="true" />
-                    <element signature="e#5842#5843#0" expanded="true" />
-                    <element signature="e#5891#5892#0" expanded="true" />
-                    <element signature="e#5919#5920#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ListUserAdapter.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/ListUserAdapter.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="792">
-                  <caret line="34" column="129" selection-start-line="34" selection-start-column="129" selection-end-line="34" selection-end-column="129" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="User.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/User.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
-                  <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="activity_register.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.0689654" vertical-offset="1304" max-vertical-offset="1620">
+              <caret line="79" column="37" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
+              <folding>
+                <element signature="e#681#706#0" expanded="true" />
+                <element signature="e#1078#1102#0" expanded="true" />
+                <element signature="e#1475#1499#0" expanded="true" />
+                <element signature="e#2208#2231#0" expanded="true" />
+                <element signature="e#2559#2589#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.5666666" vertical-offset="205" max-vertical-offset="558">
+              <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BurrowMainActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/BurrowMainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-19.5" vertical-offset="405" max-vertical-offset="3006">
+              <caret line="55" column="24" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1931#1966#0" expanded="true" />
+                <element signature="e#2467#3736#0" expanded="true" />
+                <element signature="e#3721#3722#0" expanded="true" />
+                <element signature="e#5802#5803#0" expanded="true" />
+                <element signature="e#5846#5847#0" expanded="true" />
+                <element signature="e#5895#5896#0" expanded="true" />
+                <element signature="e#5923#5924#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListUserAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/ListUserAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="792">
+              <caret line="34" column="92" selection-start-line="34" selection-start-column="92" selection-end-line="34" selection-end-column="92" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8547486" vertical-offset="90" max-vertical-offset="756">
+              <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
+              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -636,6 +585,11 @@
                 <option name="name" value="assembleRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Assembles all Unsigned builds" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="assembleUnsigned" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Assembles and tests this project." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="build" />
@@ -662,6 +616,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="checkReleaseManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="checkUnsignedManifest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Deletes the build directory." />
@@ -721,6 +679,22 @@
                 <option name="name" value="compileReleaseRenderscript" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="compileUnsignedAidl" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="compileUnsignedJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="compileUnsignedNdk" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="compileUnsignedRenderscript" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Installs and runs the tests for Build 'debug' on connected devices." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="connectedAndroidTest" />
@@ -746,6 +720,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="dexRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="dexUnsigned" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
@@ -808,6 +786,26 @@
                 <option name="name" value="generateReleaseSources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="generateUnsignedAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="generateUnsignedBuildConfig" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="generateUnsignedResValues" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="generateUnsignedResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="generateUnsignedSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Installs the Debug build" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="installDebug" />
@@ -833,9 +831,19 @@
                 <option name="name" value="lintRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Runs lint on the Unsigned build" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="lintUnsigned" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Runs lint on just the fatal issues in the Release build" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="lintVitalRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs lint on just the fatal issues in the Unsigned build" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="lintVitalUnsigned" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
@@ -863,6 +871,14 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="mergeUnsignedAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="mergeUnsignedResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="packageDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -872,6 +888,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="packageRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="packageUnsigned" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
@@ -899,7 +919,15 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="preDexUnsigned" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="preReleaseBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="preUnsignedBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
@@ -912,6 +940,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="prepareReleaseDependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareUnsignedDependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
@@ -950,6 +982,18 @@
                 <option name="name" value="processReleaseResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="processUnsignedJavaRes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="processUnsignedManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="processUnsignedResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Displays the signing info for each variant" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="signingReport" />
@@ -975,6 +1019,11 @@
                 <option name="name" value="uninstallRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Uninstalls the Unsigned build" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="uninstallUnsigned" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="validateDebugSigning" />
               </ExternalTaskPojo>
@@ -989,7 +1038,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4240819064486" />
+        <entry key="$PROJECT_DIR$" value="4240877134951" />
         <entry key="$PROJECT_DIR$/../WhatToEat" value="4220109111891" />
       </map>
     </option>
@@ -1253,7 +1302,6 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/app/.gitignore" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/SharedPrefs.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/RegisterHome.java" />
@@ -1261,17 +1309,18 @@
         <option value="$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/User.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/RegisterClient.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/list_items.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/ListUserAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/BurrowMainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_burrow_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/BurrowMainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/ListUserAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/RegisterActivity.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="792" />
+    <option name="y" value="24" />
     <option name="width" value="1366" />
     <option name="height" value="744" />
   </component>
@@ -1350,58 +1399,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Burrow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Burrow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="burrow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Burrow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Burrow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -1420,7 +1417,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="015d483bb1101e12" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="d1c9d25b" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="AVD_for_Nexus_5_by_Google" />
     <property name="options.lastSelected" value="preferences.keymap" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -1430,6 +1427,8 @@
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.SHOW" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.SHOW" value="true" />
+    <property name="android.project.structure.last.selected" value="app" />
+    <property name="android.project.structure.proportion" value="0.15" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.packageName">
@@ -1617,7 +1616,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="792" width="1366" height="744" extended-state="6" />
+    <frame x="0" y="24" width="1366" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1626,7 +1625,7 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.52495974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6247987" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1634,14 +1633,14 @@
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4347826" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31400967" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28333333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28333333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1708,13 +1707,13 @@
           <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1927#1962#0" expanded="true" />
-            <element signature="e#2463#3732#0" expanded="true" />
-            <element signature="e#3717#3718#0" expanded="true" />
-            <element signature="e#5798#5799#0" expanded="true" />
-            <element signature="e#5842#5843#0" expanded="true" />
-            <element signature="e#5891#5892#0" expanded="true" />
-            <element signature="e#5919#5920#0" expanded="true" />
+            <element signature="e#1931#1966#0" expanded="true" />
+            <element signature="e#2467#3736#0" expanded="true" />
+            <element signature="e#3721#3722#0" expanded="true" />
+            <element signature="e#5802#5803#0" expanded="true" />
+            <element signature="e#5846#5847#0" expanded="true" />
+            <element signature="e#5895#5896#0" expanded="true" />
+            <element signature="e#5923#5924#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1723,7 +1722,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#492#510#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1741,13 +1742,13 @@
           <caret line="24" column="23" selection-start-line="24" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1927#1962#0" expanded="true" />
-            <element signature="e#2463#3732#0" expanded="true" />
-            <element signature="e#3717#3718#0" expanded="true" />
-            <element signature="e#5798#5799#0" expanded="true" />
-            <element signature="e#5842#5843#0" expanded="true" />
-            <element signature="e#5891#5892#0" expanded="true" />
-            <element signature="e#5919#5920#0" expanded="true" />
+            <element signature="e#1931#1966#0" expanded="true" />
+            <element signature="e#2467#3736#0" expanded="true" />
+            <element signature="e#3721#3722#0" expanded="true" />
+            <element signature="e#5802#5803#0" expanded="true" />
+            <element signature="e#5846#5847#0" expanded="true" />
+            <element signature="e#5895#5896#0" expanded="true" />
+            <element signature="e#5923#5924#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1782,7 +1783,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="648">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#492#510#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1800,13 +1803,13 @@
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1927#1962#0" expanded="true" />
-            <element signature="e#2463#3732#0" expanded="true" />
-            <element signature="e#3717#3718#0" expanded="true" />
-            <element signature="e#5798#5799#0" expanded="true" />
-            <element signature="e#5842#5843#0" expanded="true" />
-            <element signature="e#5891#5892#0" expanded="true" />
-            <element signature="e#5919#5920#0" expanded="true" />
+            <element signature="e#1931#1966#0" expanded="true" />
+            <element signature="e#2467#3736#0" expanded="true" />
+            <element signature="e#3721#3722#0" expanded="true" />
+            <element signature="e#5802#5803#0" expanded="true" />
+            <element signature="e#5846#5847#0" expanded="true" />
+            <element signature="e#5895#5896#0" expanded="true" />
+            <element signature="e#5923#5924#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1830,7 +1833,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="648">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#492#510#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1848,13 +1853,13 @@
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1927#1962#0" expanded="true" />
-            <element signature="e#2463#3732#0" expanded="true" />
-            <element signature="e#3717#3718#0" expanded="true" />
-            <element signature="e#5798#5799#0" expanded="true" />
-            <element signature="e#5842#5843#0" expanded="true" />
-            <element signature="e#5891#5892#0" expanded="true" />
-            <element signature="e#5919#5920#0" expanded="true" />
+            <element signature="e#1931#1966#0" expanded="true" />
+            <element signature="e#2467#3736#0" expanded="true" />
+            <element signature="e#3721#3722#0" expanded="true" />
+            <element signature="e#5802#5803#0" expanded="true" />
+            <element signature="e#5846#5847#0" expanded="true" />
+            <element signature="e#5895#5896#0" expanded="true" />
+            <element signature="e#5923#5924#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1878,7 +1883,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#492#510#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1896,13 +1903,13 @@
           <caret line="48" column="55" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1927#1962#0" expanded="true" />
-            <element signature="e#2463#3732#0" expanded="true" />
-            <element signature="e#3717#3718#0" expanded="true" />
-            <element signature="e#5798#5799#0" expanded="true" />
-            <element signature="e#5842#5843#0" expanded="true" />
-            <element signature="e#5891#5892#0" expanded="true" />
-            <element signature="e#5919#5920#0" expanded="true" />
+            <element signature="e#1931#1966#0" expanded="true" />
+            <element signature="e#2467#3736#0" expanded="true" />
+            <element signature="e#3721#3722#0" expanded="true" />
+            <element signature="e#5802#5803#0" expanded="true" />
+            <element signature="e#5846#5847#0" expanded="true" />
+            <element signature="e#5895#5896#0" expanded="true" />
+            <element signature="e#5923#5924#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1929,7 +1936,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#492#510#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1947,13 +1956,13 @@
           <caret line="16" column="76" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1927#1962#0" expanded="true" />
-            <element signature="e#2463#3732#0" expanded="true" />
-            <element signature="e#3717#3718#0" expanded="true" />
-            <element signature="e#5798#5799#0" expanded="true" />
-            <element signature="e#5842#5843#0" expanded="true" />
-            <element signature="e#5891#5892#0" expanded="true" />
-            <element signature="e#5919#5920#0" expanded="true" />
+            <element signature="e#1931#1966#0" expanded="true" />
+            <element signature="e#2467#3736#0" expanded="true" />
+            <element signature="e#3721#3722#0" expanded="true" />
+            <element signature="e#5802#5803#0" expanded="true" />
+            <element signature="e#5846#5847#0" expanded="true" />
+            <element signature="e#5895#5896#0" expanded="true" />
+            <element signature="e#5923#5924#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2013,14 +2022,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="648">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/SharedPrefs.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
@@ -2033,6 +2034,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334" vertical-offset="49896" max-vertical-offset="90972">
           <caret line="2945" column="0" selection-start-line="2945" selection-start-column="0" selection-end-line="2945" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2057,14 +2059,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="111" max-vertical-offset="702">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/RegisterHome.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6411483" vertical-offset="1136" max-vertical-offset="1728">
@@ -2073,14 +2067,6 @@
             <element signature="e#3840#3841#0" expanded="false" />
             <element signature="e#3874#3875#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2108,27 +2094,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/ListUserAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="792">
-          <caret line="34" column="129" selection-start-line="34" selection-start-column="129" selection-end-line="34" selection-end-column="129" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_items.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.655172" vertical-offset="108" max-vertical-offset="648">
-          <caret line="28" column="25" selection-start-line="28" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_burrow_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3305785" vertical-offset="74" max-vertical-offset="972">
@@ -2142,10 +2107,58 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
+          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+          <folding>
+            <element signature="e#492#510#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/RegisterClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1570" max-vertical-offset="3240">
+          <caret line="97" column="22" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2656#2672#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/RegisterActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.8356941" vertical-offset="648" max-vertical-offset="2574">
+          <caret line="72" column="61" selection-start-line="72" selection-start-column="61" selection-end-line="72" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1106#1141#0" expanded="true" />
+            <element signature="e#1697#2019#0" expanded="true" />
+            <element signature="e#1868#1894#0" expanded="true" />
+            <element signature="e#2008#2009#0" expanded="true" />
+            <element signature="e#2384#2419#0" expanded="true" />
+            <element signature="e#4641#4676#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_items.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1186441" vertical-offset="108" max-vertical-offset="648">
+          <caret line="28" column="25" selection-start-line="28" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.724138" vertical-offset="1082" max-vertical-offset="1620">
-          <caret line="79" column="31" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
+        <state vertical-scroll-proportion="-4.0689654" vertical-offset="1304" max-vertical-offset="1620">
+          <caret line="79" column="37" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
           <folding>
             <element signature="e#681#706#0" expanded="true" />
             <element signature="e#1078#1102#0" expanded="true" />
@@ -2161,52 +2174,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="58" max-vertical-offset="558">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        <state vertical-scroll-proportion="-4.5666666" vertical-offset="205" max-vertical-offset="558">
+          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/BurrowMainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0935252" vertical-offset="862" max-vertical-offset="3006">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state vertical-scroll-proportion="-19.5" vertical-offset="405" max-vertical-offset="3006">
+          <caret line="55" column="24" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1927#1962#0" expanded="true" />
-            <element signature="e#2463#3732#0" expanded="true" />
-            <element signature="e#3717#3718#0" expanded="true" />
-            <element signature="e#5798#5799#0" expanded="true" />
-            <element signature="e#5842#5843#0" expanded="true" />
-            <element signature="e#5891#5892#0" expanded="true" />
-            <element signature="e#5919#5920#0" expanded="true" />
+            <element signature="e#1931#1966#0" expanded="true" />
+            <element signature="e#2467#3736#0" expanded="true" />
+            <element signature="e#3721#3722#0" expanded="true" />
+            <element signature="e#5802#5803#0" expanded="true" />
+            <element signature="e#5846#5847#0" expanded="true" />
+            <element signature="e#5895#5896#0" expanded="true" />
+            <element signature="e#5923#5924#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/RegisterClient.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2488" max-vertical-offset="3240">
-          <caret line="143" column="0" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/ListUserAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="792">
+          <caret line="34" column="92" selection-start-line="34" selection-start-column="92" selection-end-line="34" selection-end-column="92" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2656#2672#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/dubhacks/android/sasr/burrow/RegisterActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20143884" vertical-offset="1582" max-vertical-offset="2358">
-          <caret line="91" column="28" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1106#1141#0" expanded="true" />
-            <element signature="e#1697#2022#0" expanded="true" />
-            <element signature="e#1867#1893#0" expanded="true" />
-            <element signature="e#2011#2012#0" expanded="true" />
-            <element signature="e#4171#4206#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.8547486" vertical-offset="90" max-vertical-offset="756">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
