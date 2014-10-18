@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.JsonObject;
@@ -41,6 +42,18 @@ public class RegisterActivity extends Activity
         }
         Button registerButton = (Button) findViewById(R.id.register_button);
         registerButton.setOnClickListener(this);
+        final CheckBox checkBox = (CheckBox)findViewById(R.id.checkBox);
+        final EditText hint = (EditText)findViewById(R.id.connect_home_text);
+        checkBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (checkBox.isChecked()) {
+                    hint.setText(R.string.connect_home_name);
+                } else {
+                    hint.setText("Connect to a Home Name");
+                }
+            }
+        });
     }
 
 
@@ -96,7 +109,6 @@ public class RegisterActivity extends Activity
         boolean success = jsonObject.get("success").getAsBoolean();
         String homeid = jsonObject.get("homeid").getAsString();
         String ssid = jsonObject.get("ssid").getAsString();
-
 
 
         preferences.edit().putBoolean(getString(R.string.user_registered), success).apply();

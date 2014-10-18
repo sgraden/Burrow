@@ -9,7 +9,7 @@
     <string name="first_name_hint">First Name</string>
     <string name="last_name_hint">Last Name</string>
     <string name="user_name_hint">User Name</string>
-    <string name="register_text">Register Phone!</string>
+    <string name="register_text">Register Phone to Home!</string>
     <string name="password_hint">Password</string>
     <string name="title_activity_register">RegisterActivity</string>
     <string name="pref_location">localPrefrences</string>
@@ -17,8 +17,9 @@
     <string name="title_activity_register_home">RegisterHome</string>
     <string name="home_register">Register a Home</string>
     <string name="home_register_name">Home Name</string>
-    <string name="connect_home_name">Connect to home by name</string>
-    <string name="connect_to_home_by_name">Connec to home</string>
-    <string name="house_admin_checkbox">Are you the house Admin?</string>
+    <string name="connect_home_name">Create a Home Name</string>
+    <string name="connect_to_home_by_name">Connect to Home Name</string>
+    <string name="house_admin_checkbox">Are you the house admin?</string>
+    <string name="refresh_button">Refresh Users</string>
 
 </resources>

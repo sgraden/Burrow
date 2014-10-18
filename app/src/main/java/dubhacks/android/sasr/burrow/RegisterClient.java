@@ -113,25 +113,6 @@ public class RegisterClient {
         clientInterface.registerUser(body, cb);
     }
 
-//    /**
-//     * Registers a home with the mac/ip address and the admin making the house
-//     */
-//    public void registerHome(String homeName, Callback<JsonObject> cb) {
-//        Map<String, Map<String, String>> body = new HashMap<String, Map<String, String>>();
-//        setUpHomeInfo(body, homeName);
-//        Log.d(TAG, "HERE");
-//        Map<String, String> info = new HashMap<String, String>();
-//        info.put("deviceId", getDeviceId());
-//        body.put("userInfo", info);
-//        clientInterface.registerHome(body, cb);
-//    }
-
-//    public void connectToHome(String existingHome, Callback<JsonObject> cb) {
-//        Map<String, String> body = new HashMap<String, String>();
-//        body.put("deviceId", getDeviceId());
-//        body.put("homeName", existingHome);
-//        clientInterface.connectHome(body, cb);
-//    }
 
     /**
      * Adds all the appropriate user information
@@ -159,6 +140,9 @@ public class RegisterClient {
         String phoneNumber = telephonyManager.getLine1Number();
         phoneNumber = (phoneNumber == null || phoneNumber.isEmpty()) ? "-1" : phoneNumber;
         String deviceId = getDeviceId();
+        deviceId = (deviceId == null || deviceId.isEmpty()) ? "" + Math.random() : deviceId;
+
+        Log.d(TAG, deviceId);
         userInfo.put("phoneNumber", phoneNumber);
         userInfo.put("deviceId", deviceId);
         body.put("userInfo", userInfo);

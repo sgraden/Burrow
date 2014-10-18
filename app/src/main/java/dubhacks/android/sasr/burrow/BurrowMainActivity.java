@@ -12,19 +12,26 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
+import android.widget.TextView;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 
-public class BurrowMainActivity extends Activity implements Callback<JsonObject> {
+public class BurrowMainActivity extends Activity implements Callback<JsonObject>, View.OnClickListener {
 
     public String TAG = BurrowMainActivity.class.getCanonicalName();
-    private SharedPreferences preferences;
+    private SharedPreferences mPreferences;
     public static String NO_HOME = "noHome";
-
+    private List<User> mUsers;
+    private ListView mListView;
 
     public static void launch(Context context) {
         Intent i = new Intent(context, BurrowMainActivity.class);
@@ -34,32 +41,27 @@ public class BurrowMainActivity extends Activity implements Callback<JsonObject>
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        preferences = SharedPrefs.getInstance(this);
-//        boolean registered = preferences.getBoolean(getString(R.string.user_registered), false);
-//        String connectedHome = preferences.getString("connectedHome", NO_HOME);
-//        if (!registered) {
-//            finish();
-//        } else if (connectedHome.equals(NO_HOME)) {
-//            Intent registerIntent = new Intent(this, RegisterActivity.class);
-//            startActivity(registerIntent);
-//            RegisterHome.launch(this);
-//        }
+        mPreferences = SharedPrefs.getInstance(this);
         setContentView(R.layout.activity_burrow_main);
-//        RegisterClient registerClient = RegisterClient.getInstance(this);
-//        registerClient.getUsers(this);
-
+        mListView = (ListView)findViewById(R.id.list_content_view);
+        TextView homeName = (TextView)findViewById(R.id.random_text);
+        String home = mPreferences.getString("ssid", NO_HOME);
+        home = home.equals(NO_HOME) ? "" : home;
+        homeName.setText(home);
+        Button refreshButton = (Button) findViewById(R.id.refresh_button);
+        refreshButton.setOnClickListener(this);
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        boolean registered = preferences.getBoolean(getString(R.string.user_registered), false);
-        String connectedHome = preferences.getString("homeConnected", NO_HOME);
+        boolean registered = mPreferences.getBoolean(getString(R.string.user_registered), false);
+        String connectedHome = mPreferences.getString("homeConnected", NO_HOME);
         Log.d(TAG, "R " + registered + " C " + connectedHome);
         if (!registered || connectedHome.equals(NO_HOME)) {
             RegisterActivity.launch(this);
         } else {
-            RegisterClient.getInstance(this).getUsers(connectedHome, this);
+            fetchUsers();
         }
         Button toggle = (Button)findViewById(R.id.toggle_button);
         Log.d(TAG, toggle == null ? "Failed" : "good");
@@ -76,12 +78,11 @@ public class BurrowMainActivity extends Activity implements Callback<JsonObject>
                                     Log.d(TAG, jsonObject.toString());
                                     String status = jsonObject.get("success").toString();
                                     if (status.equals("connected")) {
-                                        preferences.edit().putString("ssid", "something").apply();
+                                        mPreferences.edit().putString("ssid", "something").apply();
                                     } else {
                                         setSsidToCurrent();
                                     }
-                                    String connectedHome = preferences.getString("homeConnected", NO_HOME);
-                                    RegisterClient.getInstance(BurrowMainActivity.this).getUsers(connectedHome, BurrowMainActivity.this);
+                                    fetchUsers();
 
                                 }
 
@@ -93,6 +94,11 @@ public class BurrowMainActivity extends Activity implements Callback<JsonObject>
                 }
             });
         }
+    }
+
+    private void fetchUsers() {
+        String connectedHome = mPreferences.getString("homeConnected", NO_HOME);
+        RegisterClient.getInstance(BurrowMainActivity.this).getUsers(connectedHome, BurrowMainActivity.this);
     }
 
 
@@ -118,18 +124,38 @@ public class BurrowMainActivity extends Activity implements Callback<JsonObject>
     private void setSsidToCurrent() {
         WifiManager wifiManager = (WifiManager)this.getSystemService(Context.WIFI_SERVICE);
         WifiInfo wifiInfo = wifiManager.getConnectionInfo();
-        String macAddress = wifiInfo.getMacAddress();
         String ssid = wifiInfo.getSSID();
-        preferences.edit().putString("ssid", ssid).apply();
+        mPreferences.edit().putString("ssid", ssid).apply();
     }
 
     @Override
     public void success(JsonObject jsonObject, Response response) {
         Log.d(TAG, jsonObject.toString());
+        JsonArray array = jsonObject.getAsJsonArray("userInfo");
+        parse(array);
+    }
+
+    private void parse(JsonArray array) {
+        mUsers = new ArrayList<User>();
+        for (int i = 0; i < array.size(); i++) {
+            JsonObject element = array.get(i).getAsJsonObject();
+            mUsers.add(new User(
+                    element.get("userName").toString(),
+                    element.get("firstName").toString(),
+                    element.get("lastName").toString()
+            ));
+        }
+        ListUserAdapter listUserAdapter = new ListUserAdapter(this, mUsers);
+        mListView.setAdapter(listUserAdapter);
     }
 
     @Override
     public void failure(RetrofitError error) {
         Log.d(TAG, error.toString());
+    }
+
+    @Override
+    public void onClick(View v) {
+        fetchUsers();
     }
 }
