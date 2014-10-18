@@ -2,16 +2,26 @@ package dubhacks.android.sasr.burrow;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 
-public class BurrowMainActivity extends Activity {
+public class BurrowMainActivity extends Activity implements View.OnClickListener {
+
+    public String TAG = this.getClass().getCanonicalName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_burrow_main);
+
+        Button registerButton = (Button) findViewById(R.id.register_button);
+        registerButton.setOnClickListener(this);
+
     }
 
 
@@ -32,5 +42,19 @@ public class BurrowMainActivity extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * Listerner for the button. Eventually we want to push this elsewhere since we
+     * don't need this logic in the the activity start.
+     * @param v
+     */
+    @Override
+    public void onClick(View v) {
+        String firstName = ((EditText)findViewById(R.id.first_name)).getText().toString();
+        String lastName = ((EditText)findViewById(R.id.last_name)).getText().toString();
+        String userName = ((EditText)findViewById(R.id.user_name)).getText().toString();
+        Log.d(TAG, "FN: " + firstName + " LN " + lastName + " username " + userName);
+
     }
 }
