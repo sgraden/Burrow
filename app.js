@@ -18,6 +18,7 @@ app.get('/', function(req, res) {
 	res.sendfile('public/views/index.html', {title:'Burrow'});
 });
 var ssid;
+var homeNameZ;
 // register a user
 app.post('/user/register', function(req, res) {
 	var userInfo = req.body.userInfo;
@@ -31,7 +32,8 @@ app.post('/user/register', function(req, res) {
 		res.send({
 			"success":true,
 			"homeid":homeId,
-			"ssid":ssid
+			"ssid":ssid,
+			"homeName":houseInfo.homeName
 		});
 	}
 	//console.log("is admin: " + userInfo.isAdmin);
