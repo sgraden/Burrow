@@ -15,6 +15,17 @@ db.serialize(function() {
 		deviceid varchar(60) NOT NULL,
 		PRIMARY KEY (id)
 	);
+
+  	CREATE TABLE house (
+		id int NOT NULL AUTO_INCREMENT,
+		name varchar(60) NOT NULL,
+		fname varchar(60) NOT NULL,
+		lname varchar(60) NOT NULL,
+		email varchar(60) NOT NULL,
+		phone varchar(60) NOT NULL,
+		deviceid varchar(60) NOT NULL,
+		PRIMARY KEY (id)
+  	);
   ");
 
 });
