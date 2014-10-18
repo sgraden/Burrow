@@ -2,10 +2,9 @@
 (function() {
 
 	//$(draw);
-	$(document).ready( function() {
+	$(document).ready(function() {
 		//if not logged in
-		//$('#loginModal, #cover').show();
+		$('#loginModal, #cover').show();
+		console.log('hello');
 	});
-
-
 });

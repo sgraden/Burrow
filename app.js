@@ -22,11 +22,11 @@ var ssid;
 app.post('/user/register', function(req, res) {
 	var userInfo = req.body.userInfo;
 	var houseInfo = req.body.houseInfo;
-	console.log(userInfo);
-	console.log(houseInfo);
+	//console.log(userInfo);
+	//console.log(houseInfo);
 	var completedFunction = function(homeId) {
-		sqlFile.checkDatabase('user');
-		sqlFile.checkDatabase('home');
+		//sqlFile.checkDatabase('user');
+		//sqlFile.checkDatabase('home');
 
 		res.send({
 			"success":true,
@@ -34,22 +34,22 @@ app.post('/user/register', function(req, res) {
 			"ssid":ssid
 		});
 	}
-	console.log("admin level: " + userInfo.isAdmin);
+	//console.log("is admin: " + userInfo.isAdmin);
 	if (userInfo.isAdmin == "true") {
-		console.log('is admin');
+		console.log('User is admin');
 		ssid = houseInfo.ssid;
 		// The admin will register the home
 		sqlFile.registerHome(houseInfo.homeName, houseInfo.ssid, userInfo.deviceId, function(err, homeId) {
-			console.log("in callbac j " + homeId);
+			//console.log("in callbac j " + homeId);
 			// After we establish the home, lets add the user
 			sqlFile.insertUser(userInfo.userName, userInfo.password, userInfo.firstName, 
 				userInfo.lastName, "hello@blah", userInfo.phoneNumber, userInfo.deviceId, 
 				homeId, 1, completedFunction);
 		});	
 	} else {
-		console.log('not admin');
+		console.log('User is not admin');
 		sqlFile.findHouseId(houseInfo.homeName, function(result) {
-			console.log("in callbac " + result.homeId);
+			//console.log("in callbac " + result.homeId);
 			ssid = result.ssid;
 			var isConnected = 0;
 			if (houseInfo.ssid == result.ssid) {
@@ -76,7 +76,7 @@ app.post('/users', function(req, res) {
 
 app.post('/user/update', function(req, res) {
 	var body = req.body;
-	console.log(body);
+	//console.log(body);
 	var isConnectedToHome = 1;
 	if (body.isConnectedToHome == "disconnected") {
 		isConnectedToHome = 0;
@@ -91,5 +91,5 @@ app.post('/user/update', function(req, res) {
 
 // start the server
 app.listen(/*app.get('port')*/8008, function () {
-	console.log('Sean does not love boobies. Running on port: ' + app.get('port'));
+	console.log('Server running on port: ' + app.get('port'));
 });

@@ -23,53 +23,45 @@ db.serialize(function() {
 			//"mac varchar(100) NULL," +
 			"ssid varchar(60) NULL," +
 			"adminid INTEGER NOT NULL);");
-
-  	/*db.run(
-		"INSERT INTEGERO user (id, username, password, fname, lname, email, phone, deviceid)" +
-		"VALUES (1, 'jimmy', 'a', 'steven', 'raden', '@.com', '123', '23423402034');"
-	);*/
-
-  	/*db.each("SELECT * FROM user", function(err, row) {
-    	console.log(row.id + ": " + row.username);
-	});*/
 });
 
 var insertUser = function (username, pass, fname, lname, email, phone, deviceid, homeid, isConnected, cb) {
-	console.log('inserting user - new users homeid: ' + homeid);
+	console.log('Inserting user ' + username + " with home ID of " + homeid + "...");
 	var insert = db.prepare(
 		"INSERT INTO user (homeid, username, password, fname, lname, email, phone, deviceid, isConnected)" +
 		"VALUES (?,?,?,?,?,?,?,?,?);"
 	);
 	insert.run(homeid, username, pass, fname, lname, email, phone, deviceid, isConnected);
+	console.log("User inserted");
 	cb(homeid);
 };
 
 var registerHome = function (name, ssid, deviceid, cb) {
-	console.log('registering home');
+	console.log("Registering home " + name + " with SSID " + ssid + "...");
 	var insert = db.prepare(
 		"INSERT INTO home (name, ssid, adminid)" +
 		"VALUES (?, ?, ?);"
 	);
+	//console.log(deviceid);
 	insert.run(name, ssid, deviceid);
 	db.each("SELECT * FROM home WHERE adminid like '" + deviceid + "' LIMIT 1", function(err, row) {
 		var homeid = row.id;
-		console.log("registerHome homeId: " + homeid);
+		console.log("House " + name + " registered with ID of " + homeid);
 		
 		cb(err, homeid);
 	});
 };
 
 var findHouseId = function(houseName, cb) {
-	//checkDatabase('user');
-	console.log("finding house housename: " + houseName);
+	console.log("Finding ID of " + houseName + "...");
 	db.each("SELECT * FROM home WHERE name like '" +  houseName + "' LIMIT 1", function(err, row) {
-		console.log("house id " + row.id);
+		console.log("House " + houseName + " ID is " + row.id + " with SSID of " + row.ssid);
 		cb({"homeId":row.id, "ssid":row.ssid});
 	});
 };
 
 var getUsers = function(homeid, cb) {
-	console.log("users homeid: " + homeid);
+	console.log("Finding users with home ID of " + homeid + "...");
 	db.all("SELECT * FROM user WHERE homeid = " + parseInt(homeid), function(err, rows) {
 		// console.log(rows);
 		var userInfo = [];
@@ -94,135 +86,11 @@ var getUsers = function(homeid, cb) {
 };
 
 var updateUser = function(isConnectedToHome, deviceId, cb) {
-	console.log("user on " + deviceId + " ");
+	console.log("user on " + deviceId + " is now " + (isConnectedToHome == 1 ? "connected" : "disconnected"));
 	db.all("UPDATE user SET isConnected = " + isConnectedToHome + " WHERE deviceid = " + deviceId, function(err, rows) {
 		cb();
 	});
 };
-
-// //Connects user to a home
-// var connectHome = function (deviceid, homename) {
-// 	var userid = -1;
-// 	var homeid = -1;
-// 	async.series([
-// 		function(cb) {
-// 			//user id
-// 			db.each("SELECT * FROM user WHERE deviceid like '" + deviceid + "' LIMIT 1", function(err, row) {
-// 				userid = row.id;
-// 				console.log("inloop user:" + userid);
-// 				db.each("SELECT * FROM home WHERE name like '" + homename + "' LIMIT 1", function(err, row) {
-// 					homeid = row.id;
-// 					console.log("inloop: " + homeid);
-// 					cb(null, [userid, homeid]);
-// 				});
-// 			});
-// 		}
-// 	],
-// 		function(err, results) {
-// 			//insert into user_home
-// 			console.log(results);
-// 			var insert = db.prepare(
-// 				"INSERT INTO user_home (userid, homeid)" +
-// 				"VALUES (?, ?);"
-// 			);
-// 			console.log("userid: " + results[0][0]);
-// 			console.log("homeid: " + results[0][1]);
-// 			insert.run(results[0][0], results[0][1]);
-// 		});
-// };
-
-// var usersInHome = function (homename, lastResort) {
-// 	//find homeid
-// 	var homeid = -1;
-// 	var users = [];
-// 	var usersFinal = []
-// 	async.series([
-// 		function(cb) {
-// 			db.all("SELECT * FROM home WHERE name like '" + homename + "' LIMIT 1", function(err, rows) {
-// 				console.log("first q");
-// 				console.log(rows);
-// 				homeid = rows[0].id;
-// 				console.log("HI " + homeid);
-// 				db.all("SELECT * FROM user_home WHERE homeid like '" + parseInt(homeid) + "'", function(err, rows) {
-// 					users = rows;
-// 					console.log("U");
-// 					console.log(users);
-// 					cb(null, users);
-// 				});
-// 			});
-// 		}],
-// 		function(cb, results) {
-// 			//find user info
-// 			console.log("users ");
-// 			console.log(results[0]);
-// 			// var usersFinal = [];
-// 			// results[0].forEach(function(item) {
-// 			// 	console.log("Item");
-// 			// 	console.log(item);
-// 			// 	checkDatabase("user");
-// 			// 	db.all("SELECT * FROM user", function(err, row) { //WHERE id like '" + parseInt(item.userid) + "' LIMIT 1", function(err, row) {
-// 			// 		console.log("row");
-// 			// 		console.log(row);
-// 			// 		usersFinal.push({
-// 			// 			"firstName" : row.fname,
-// 			// 			"lastName" : row.lname,
-// 			// 			"userName" : row.username
-// 			// 		});
-// 			// 	});
-				
-// 			// });
-		
-// 			// console.log("DONE");
-// 			// console.log(usersFinal)
-// 			// //res.send({
-// 			// 	"success":true,
-// 			// 	"users": usersFinal
-// 			// });
-// 			// return results[0];
-// 			lastResort(results[0]);
-// 		}
-// 	);
-// 	// console.log(users);
-// /*	db.each("SELECT * FROM home LIMIT 1", function(row, err) {  //WHERE name like '" + homename + "' LIMIT 1", function(err, row) {
-// 		// homeid = row.homeid;
-// 		console.log(row);
-// 	});
-
-// 	//find usersid that are joined with home
-// 	var usersId = [];
-// 	db.each("SELECT * FROM user_home WHERE homeid = " + homeid, function(err, row) {
-// 		usersId.push(row.userid);
-// 		console.log("usersinhome row: " + row);
-// 	});
-
-// 	console.log("usersinhome user ID: " + usersId);
-
-// 	//find user info
-// 	var users = [];
-// 	usersId.forEach(function(id) {
-// 		db.each("SELECT * FROM user WHERE id = " + id + "LIMIT 1", function(err, row) {
-// 			users.push(row.username);
-// 		});
-// 	});
-// 	console.log("usersinhome users name: " + users);*/
-// 	// return [];
-// };
-
-// var actuallygetUsers = function(users, cb) {
-// 	var results = [];
-// 	for (var i = 0; i < users.length; i++) {
-// 		var user = users[i];
-// 		console.log(user);
-// 		db.each("SELECT * FROM user WHERE id = " + user.userid, function(err, row) {
-// 			console.log("R " + row.username);
-// 			results[i] = {
-// 				"userName" : row.username,
-// 				"firstName" : row.fname,
-// 				"lastName" : row.lname
-// 			};
-// 		});
-// 	}
-// };
 
 var checkDatabase = function(table, username) {
 	var specify = "";
@@ -230,7 +98,7 @@ var checkDatabase = function(table, username) {
 		specify = " WHERE username like '" + username + "'";
 	}
 	db.each("SELECT * FROM " + table + specify, function(err, row) {
-		console.log("INSERTED " + table + ": " + row.id);
+		console.log("Row in " + table + ": " + row.id);
 	});
 };
 
