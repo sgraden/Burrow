@@ -4,7 +4,8 @@
   "description": "Telling you who is home",
   "dependencies": {
     "express": "^3.4.7",
-    "sqlite3": "3.0.2"
+    "sqlite3": "3.0.2",
+    "async": "*"
   },
   "engines": {
     "node": "0.10.x"
