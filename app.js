@@ -19,8 +19,13 @@ app.get('/', function(req, res) {
 });
 
 // get the post request and run query
-app.post('/data', function(req, res) {
-	console.log(req.body);
+app.post('/user/register', function(req, res) {
+	var userInfo = req.body.userInfo;
+	console.log(userInfo);
+	sqlFile.insertUser(userInfo.userName, userInfo.password, userInfo.firstName, 
+		userInfo.lastName, "hello@blah", userInfo.phoneNumber, userInfo.deviceId);
+	sqlFile.getUser();
+
 	res.send({
 		"success":true
 	});
@@ -66,6 +71,17 @@ app.post('/data', function(req, res) {
 	//     }
 	// });
 });
+
+app.post('/home/register', function(req, res) {
+	var userInfo = req.body.userInfo;
+	console.log(userInfo);
+	sqlFile.insertUser(userInfo.userName, userInfo.password, userInfo.firstName, 
+		userInfo.lastName, "hello@blah", userInfo.phoneNumber, userInfo.deviceId);
+	sqlFile.getUser();
+
+	res.send({
+		"success":true
+	});
 
 // start the server
 app.listen(/*app.get('port')*/8008, function () {

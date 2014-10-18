@@ -2,61 +2,54 @@ var sql = require('sqlite3').verbose();
 var db = new sql.Database(':memory:');
 
 db.serialize(function() {
-  db.run("CREATE TABLE lorem (info TEXT)");
+  	db.run(
+  		"CREATE TABLE user (" + 
+			"id INTEGER PRIMARY KEY NOT NULL," +
+			"username varchar(60) NOT NULL," +
+			"password varchar(10) NOT NULL," +
+			"fname varchar(60) NOT NULL," +
+			"lname varchar(60) NOT NULL," +
+			"email varchar(60) NOT NULL," +
+			"phone varchar(60) NOT NULL," +
+			"deviceid varchar(60) NOT NULL);" +
+	  	"CREATE TABLE house (" +
+			"id INTEGER PRIMARY KEY NOT NULL," +
+			"name varchar(60) NOT NULL," +
+			"geo varchar(100) NULL," +
+			"ssid varchar(60) NULL," +
+			"adminid INTEGER NOT NULL);" +
+		"CREATE TABLE user_house (" +
+			"userid INTEGER NOT NULL," +
+			"houseid INTEGER NOT NULL);"
+  );
 
-  db.run("
-  	CREATE TABLE user (
-		id int NOT NULL AUTO_INCREMENT,
-		username varchar(60) NOT NULL,
-		fname varchar(60) NOT NULL,
-		lname varchar(60) NOT NULL,
-		email varchar(60) NOT NULL,
-		phone varchar(60) NOT NULL,
-		deviceid varchar(60) NOT NULL,
-		PRIMARY KEY (id)
+  	/*db.run(
+		"INSERT INTEGERO user (id, username, password, fname, lname, email, phone, deviceid)" +
+		"VALUES (1, 'jimmy', 'a', 'steven', 'raden', '@.com', '123', '23423402034');"
+	);*/
+
+  	/*db.each("SELECT * FROM user", function(err, row) {
+    	console.log(row.id + ": " + row.username);
+	});*/
+});
+
+var insertUser = function (username, pass, fname, lname, email, phone, deviceid) {
+	var insert = db.prepare(
+		"INSERT INTO user (username, password, fname, lname, email, phone, deviceid)" +
+		"VALUES (?,?,?,?,?,?,?);"
 	);
+	insert.run(username, pass, fname, lname, email, phone, deviceid);
+};
 
-  	CREATE TABLE house (
-		id int NOT NULL AUTO_INCREMENT,
-		name varchar(60) NOT NULL,
-		fname varchar(60) NOT NULL,
-		lname varchar(60) NOT NULL,
-		email varchar(60) NOT NULL,
-		phone varchar(60) NOT NULL,
-		deviceid varchar(60) NOT NULL,
-		PRIMARY KEY (id)
-  	);
-  ");
+var getUser = function(username) {
+	var specify = "";
+	if (username) {
+		specify = " WHERE username like '" + username + "'";
+	}
+	db.each("SELECT * FROM user" + specify, function(err, row) {
+		console.log(row.id + ": " + row.username);
+	});
+};
 
-});
-
-db.close();
-
-/*var user = sql.define ({
-	name: 'user',
-	columns: ['userid', 'fname', 'lname', 'email']
-});
-
-var house = sql.define({
-	name: 'house',
-	columns: ['houseid', 'adminuserid','housename', 'geo', 'ssid']
-});
-
-var user_house = sql.define({
-	name: 'user_house',
-	columns: ['userid', 'houseid']
-});
-
-var pass = sql.define({
-	name: 'pass',
-	columns: ['userid', 'pass']
-});
-
-var insertUser = function () {};
-
-var insert = user.insert()
-
-var query = user.select(user.star()).from(user).toQuery();
-console.log(query.values);
-
-exports.insertUser = insertUser;*/
+exports.insertUser = insertUser;
+exports.getUser = getUser;
