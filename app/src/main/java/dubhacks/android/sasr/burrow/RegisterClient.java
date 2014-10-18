@@ -1,6 +1,8 @@
 package dubhacks.android.sasr.burrow;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.telephony.TelephonyManager;
@@ -56,8 +58,9 @@ public class RegisterClient {
             public void success(JsonObject jsonObject, Response response) {
                 boolean success = jsonObject.get("success").getAsBoolean();
                 Log.d(TAG, "" + success);
-                context.getSharedPreferences(context.getString(R.string.pref_location), Context.MODE_PRIVATE);
-                
+                SharedPreferences preferences = context.getSharedPreferences(context.getString(R.string.pref_location), Context.MODE_PRIVATE);
+                preferences.edit().putBoolean(context.getString(R.string.user_registered), success).apply();
+
 
             }
 
