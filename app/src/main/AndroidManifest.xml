@@ -12,8 +12,8 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".BurrowMainActivity"
-            android:label="@string/app_name" >
+            android:name=".RegisterActivity"
+            android:label="@string/title_activity_register" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,8 +21,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RegisterActivity"
-            android:label="@string/title_activity_register" >
+            android:name=".BurrowMainActivity"
+            android:label="@string/app_name" >
         </activity>
         <activity
             android:name=".RegisterHome"
