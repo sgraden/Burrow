@@ -15,13 +15,13 @@ db.serialize(function() {
 	  	"CREATE TABLE house (" +
 			"id INTEGER PRIMARY KEY NOT NULL," +
 			"name varchar(60) NOT NULL," +
-			"geo varchar(100) NULL," +
+			"mac varchar(100) NULL," +
 			"ssid varchar(60) NULL," +
 			"adminid INTEGER NOT NULL);" +
 		"CREATE TABLE user_house (" +
 			"userid INTEGER NOT NULL," +
 			"houseid INTEGER NOT NULL);"
-  );
+  	);
 
   	/*db.run(
 		"INSERT INTEGERO user (id, username, password, fname, lname, email, phone, deviceid)" +
@@ -50,6 +50,8 @@ var getUser = function(username) {
 		console.log(row.id + ": " + row.username);
 	});
 };
+
+
 
 exports.insertUser = insertUser;
 exports.getUser = getUser;

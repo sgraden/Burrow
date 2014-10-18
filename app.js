@@ -18,7 +18,7 @@ app.get('/', function(req, res) {
 	res.sendfile('public/views/index.html', {title:'Burrow'});
 });
 
-// get the post request and run query
+// register a user
 app.post('/user/register', function(req, res) {
 	var userInfo = req.body.userInfo;
 	console.log(userInfo);
@@ -29,59 +29,28 @@ app.post('/user/register', function(req, res) {
 	res.send({
 		"success":true
 	});
-	// Get the fields here
-	// restaurant
-	// var data = req.body;
-	// var restaurant = data.resturant;
-	// var filters = {item_type: 1};
-	// console.log(data);
-	// for (var i in stuff) {
-	// 	var field = stuff[i];
-	// 	console.log(field);
-	// 	if (data[field] && data[field].to) {
-	// 		var amount = data[field];
-
-	// 		filters[field] = {
-	// 			from: parseInt(amount.from),
-	// 			to: parseInt(amount.to)
-	// 		};
-	// 	}
-	// }
-	// console.log(filters);
-
-	// var poo = ['item_name','brand_name','item_description','nf_calories','nf_total_fat','nf_cholesterol', 'nf_sugars', 'nf_sodium','nf_total_carbohydrate','nf_dietary_fiber','nf_protein'];
-
-	// ntr.v1_1.search.advanced({
- //    	fields: poo,
- //    	query: restaurant,
- //    	limit: 20,
- //    	offset: 0,
-	//     filters: filters
-	// }, function (err, results) {
-	//     if (err) console.log(err);
-	//     if (results.total) {
-	//     	console.log(results);
-	    	
-	//     	var potential = results.hits.filter(function(elem) { return elem._score > 1});
-	//     	console.log(potential);
-
-	//     	res.send(potential);
-	//     } else {
-	//     	console.log('No results...');
-	//     }
-	// });
 });
 
+//register a home
 app.post('/home/register', function(req, res) {
-	var userInfo = req.body.userInfo;
-	console.log(userInfo);
-	sqlFile.insertUser(userInfo.userName, userInfo.password, userInfo.firstName, 
-		userInfo.lastName, "hello@blah", userInfo.phoneNumber, userInfo.deviceId);
-	sqlFile.getUser();
+	var body = req.body;
+	console.log(body);
+	
 
 	res.send({
 		"success":true
 	});
+});
+
+//connect to a home
+app.post('/home/connect', function(req, res) {
+	var homeInfo = req.body;
+	console.log(body);
+
+	res.send({
+		"success":true
+	});
+});
 
 // start the server
 app.listen(/*app.get('port')*/8008, function () {
