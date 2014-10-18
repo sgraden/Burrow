@@ -1,5 +1,7 @@
 var express = require('express'),
 	path  = require('path'),
+	sqlFile = require("./public/js/sql.js"),
+	sql = require("sqlite3").verbose(),
 	app = express();
 
 // Uses the favicon
@@ -11,14 +13,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Read the body of the page
 app.use(express.bodyParser());
 
-
 // get the homepage using basic html
 app.get('/', function(req, res) {
-	res.sendfile('views/index.html', {title:'Burrow'});
+	res.sendfile('public/views/index.html', {title:'Burrow'});
 });
 
 // get the post request and run query
 app.post('/data', function(req, res) {
+	console.log(req.body);
+	res.send({
+		"success":true
+	});
 	// Get the fields here
 	// restaurant
 	// var data = req.body;
