@@ -16,12 +16,6 @@ android {
             runProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-        debug {
-            runProguard false
-        }
-        unsigned {
-            runProguard false
-        }
     }
     sourceSets {
         main {
